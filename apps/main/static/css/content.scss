@@ -1,0 +1,19 @@
+@import "variables";
+
+#main-content {
+  margin-top: $navbarHeight;
+}
+
+.counter-row b {
+  opacity: 0;
+}
+
+section{
+  opacity: 0;
+  transform: translateY(500px);
+  transition: opacity 1s ease, transform .5s ease;
+  &.loaded{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

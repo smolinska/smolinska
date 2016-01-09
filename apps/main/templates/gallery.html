@@ -1,0 +1,18 @@
+{% load staticfiles %}
+{% load main_filters %}
+<div class="clearfix">
+    {% for gallery in galleries %}
+        <div class="gallery-item {{ gallery.col_class }}">
+            <h2>{{ gallery.title }}</h2>
+            <div class="gallery">
+                {% for photo in gallery.images %}
+                    <a href="{{ photo.image.url }}"
+                            {% if forloop.counter > MAX_PHOTOS_IN_ROW %} class="hidden" {% endif %}>
+                        <img src="{{ photo.get_thumbnail_url }}" alt="{{ photo.title }}"/>
+                    </a>
+                {% endfor %}
+            </div>
+            <p>{{ gallery.desc }}</p>
+        </div>
+    {% endfor %}
+</div>

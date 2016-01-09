@@ -1,0 +1,53 @@
+@import "static/lib/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "variables";
+
+html {
+  @media (max-width: $screen-xs-max) {
+    font-size: 14px;
+  }
+  @media (min-width: $screen-sm-min) and (max-width: 1500px) {
+    font-size: 16px;
+  }
+  @media (min-width: 1500px) {
+    font-size: 17px;
+  }
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  color: $textColor;
+  font-size: 1.2em;
+  font-family: 'Poiret One', cursive;
+}
+
+a {
+  color: $mainColor;
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    color: darken($mainColor, 20%);
+  }
+}
+
+h2 {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.js-hidden-eml:before {
+  content: attr(data-user) "\0040" attr(data-website);
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+#made-by {
+  position: absolute;
+  bottom: $footerHeight;
+  right: 0;
+  font-size: 0.6em;
+  color: #ddd;
+  padding: 5px;
+  line-height: initial;
+  text-shadow: 0 0 4px #444;
+  z-index: 200;
+}

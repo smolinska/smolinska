@@ -1,0 +1,76 @@
+upstream app_server {
+    # http://michal.karzynski.pl/blog/2013/06/09/django-nginx-gunicorn-virtualenv-supervisor/
+    # https://github.com/benoitc/gunicorn/blob/master/examples/nginx.conf
+    server unix:PROD_LOCATION/PROJECT_NAME.sock fail_timeout=0;
+  }
+server {
+    server_name www.DOMAIN DOMAIN;
+    listen 80;
+    access_log  /var/log/nginx/PROJECT_NAME.log;
+
+    location /static/ {
+        expires 1y;
+        alias PROD_LOCATION/static/;
+    }
+
+    location /media/ {
+       expires 1M;
+       alias PROD_LOCATION/media/;
+    }
+
+    location /favicon.ico {
+        alias PROD_LOCATION/static/img/favicon.ico;
+    }
+
+    location /admin {
+        return 301 https://$host$request_uri;
+    }
+
+    location / {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Forwarded-Host $server_name;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_redirect off;
+        proxy_pass http://app_server;
+    }
+}
+
+server {
+    server_name www.DOMAIN DOMAIN;
+    listen 443 ssl;
+
+    ssl_certificate /etc/letsencrypt/live/DOMAIN/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/DOMAIN/privkey.pem;
+
+    access_log  /var/log/nginx/PROJECT_NAME_HTTPS.log;
+
+    location /static/ {
+        expires 1y;
+        alias PROD_LOCATION/static/;
+    }
+
+    location /media/ {
+       expires 1M;
+       alias PROD_LOCATION/media/;
+    }
+
+    location /favicon.ico {
+        alias PROD_LOCATION/static/img/favicon.ico;
+    }
+
+    location /admin {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_set_header X-Forwarded-Host $server_name;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_redirect off;
+        proxy_pass http://app_server;
+    }
+
+    location / {
+        return 301 http://$host$request_uri;
+    }
+
+}

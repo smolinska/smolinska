@@ -1,0 +1,135 @@
+.cb-slideshow, .cb-slideshow:after {
+  z-index: 160;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 80vh;
+  list-style-type: none;
+}
+
+.cb-slideshow:after {
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: '';
+  background: url('../img/pattern.png') repeat top left;
+}
+
+.cb-slideshow li span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 24s linear infinite 0s;
+}
+
+.cb-slideshow li div {
+  z-index: 1000;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  animation: titleAnimation 24s linear infinite 0s;
+}
+
+.cb-slideshow li div h3 {
+  font-weight: 800;
+  letter-spacing: 15px;
+  font-size: 240px;
+  padding: 0;
+  line-height: 200px;
+  text-shadow: 1px 1px 10px rgb(74, 74, 74);
+}
+
+.cb-slideshow li:nth-child(1) span {
+  background-image: url('../img/bosch.jpg');
+}
+
+.cb-slideshow li:nth-child(2) span {
+  background-image: url('../img/stihl1.jpg');
+  animation-delay: 6s;
+}
+
+.cb-slideshow li:nth-child(3) span {
+  background-image: url('../img/metabo.jpg');
+  animation-delay: 12s;
+}
+
+.cb-slideshow li:nth-child(4) span {
+  background-image: url('../img/karcher.jpg');
+  animation-delay: 18s;
+}
+
+.cb-slideshow li:nth-child(2) div {
+  animation-delay: 6s;
+}
+
+.cb-slideshow li:nth-child(3) div {
+  animation-delay: 12s;
+}
+
+.cb-slideshow li:nth-child(4) div {
+  animation-delay: 18s;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  8% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  17% {
+    opacity: 1
+  }
+  25% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    opacity: 0
+  }
+  8% {
+    opacity: 1
+  }
+  17% {
+    opacity: 1
+  }
+  19% {
+    opacity: 0
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+.no-cssanimations .cb-slideshow li span {
+  opacity: 1;
+}
+
+.cb-slideshow li div h3 {
+  font-size: 140px
+}
+
+@media screen and (max-width: 600px) {
+  .cb-slideshow li div h3 {
+    font-size: 80px
+  }
+}

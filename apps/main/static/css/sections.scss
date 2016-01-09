@@ -1,0 +1,61 @@
+@import "variables";
+
+.content-section {
+  padding: 100px 0;
+}
+
+.section {
+  z-index: 150;
+  position: relative;
+}
+
+.red-row {
+  height: 50vh;
+  background-color: $mainColor;
+  color: white;
+  display: flex;
+  padding: 0 200px;
+  .red-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    .glyphicon {
+      font-size: 3em;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.photo-row {
+  height: 50vh;
+  overflow: hidden;
+  background-image: url("../img/sklep.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 160;
+  position: relative;
+  &:after {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    background: url('../img/pattern.png') repeat top left;
+    height: 100%;
+    width: 100%;
+
+  }
+}
+
+.over-row, .cb-slideshow, #kontakt {
+  z-index: 200;
+  box-shadow: 0 0 6px 0 rgba(94, 94, 94, 1);
+  width: 100%;
+  margin: 0;
+}
+
+#kontakt {
+  background-color: $mainColor;
+  color: white;
+}

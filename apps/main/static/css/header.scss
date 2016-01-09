@@ -1,0 +1,42 @@
+@import "variables";
+
+
+.navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+nav.navbar {
+  margin-bottom: 0;
+  background-color: rgba(252, 255, 240, 0.96);
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom-color: lightgray;
+
+  li {
+    transition: all 0.6s ease;
+    &:hover, &.active {
+      background-color: darkred;
+      & > a {
+        background-color: transparent !important;
+        text-shadow: 2px 2px 5px rgb(241, 129, 93);
+      }
+    }
+
+    & > a {
+      color: #27030b;
+      font-size: 1.1em;
+      line-height: $navbarHeight;
+      padding: 0 30px;
+    }
+  }
+}
+
+.logo {
+  color: darkred;
+  line-height: $navbarHeight;
+  padding-left: 30px;
+  padding-right: 30px;
+}

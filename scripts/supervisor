@@ -1,0 +1,6 @@
+[program:PROJECT_NAME]
+command = PROD_LOCATION/scripts/run.sh                                ; Command to start app
+user = www-data                                                       ; User to run as
+stdout_logfile = PROD_LOCATION/logs/gunicorn_supervisor.log           ; Where to write log messages
+redirect_stderr = true                                                ; Save stderr in the same log
+environment=LANG=pl_PL.UTF-8,LC_ALL=pl_PL.UTF-8                       ; Set UTF-8 as default encoding

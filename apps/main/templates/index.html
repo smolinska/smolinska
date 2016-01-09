@@ -1,0 +1,60 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+{% block prod_style %}
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% endblock %}
+
+{% block dev_style %}
+    <link rel="stylesheet" href="{% static "lib/bootstrap/dist/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "lib/font-awesome/css/font-awesome.css" %}">
+{% endblock %}
+
+{% block own_style %}
+    <link rel="stylesheet" type="text/x-scss" href="{% static "css/lightGallery.scss" %}"/>
+    <link rel="stylesheet" type="text/x-scss" href="{% static "css/general.scss" %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static "css/sections.scss" %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static "css/header.scss" %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static "css/content.scss" %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static "css/responsive.scss" %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static "css/cb-slideshow.scss" %}">
+{% endblock %}
+
+{% block content %}
+    <div id="top" class="container-fluid">
+        {% include 'nav.html' %}
+        {% include 'content.html' %}
+    </div>
+{% endblock %}
+
+{% block prod_scripts %}
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block dev_scripts %}
+    <script src="{% static 'lib/jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'lib/jquery-migrate/jquery-migrate.js' %}"></script>
+    <script src="{% static 'lib/bootstrap/dist/js/bootstrap.js' %}"></script>
+{% endblock %}
+
+{% block own_scripts %}
+    <script type="text/javascript" src="{% static "js/scrollfire-nav.js" %}"></script>
+    <script type="text/javascript" src="{% static 'lib/lightgallery/dist/js/lightgallery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'lib/jquery-mousewheel/jquery.mousewheel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'lib/lg-thumbnail/dist/lg-thumbnail.js' %}"></script>
+    <script type="text/javascript" src="{% static 'lib/jquery-stickytabs/jquery.stickytabs.js' %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery.scrollfire.js" %}"></script>
+    <script type="text/javascript" src="{% static "lib/jquery-animateNumber/jquery.animateNumber.js" %}"></script>
+
+
+    <script type="text/javascript" src="{% static "js/preventScrollRemember.js" %}"></script>
+    <script type="text/coffeescript" src="{% static "js/sections.coffee" %}"></script>
+    <script type="text/coffeescript" src="{% static "js/utils/nospam.coffee" %}"></script>
+    <script type="text/coffeescript" src="{% static "js/utils/utils.coffee" %}"></script>
+    <script type="text/coffeescript" src="{% static "js/utils/ajaxTabs.coffee" %}"></script>
+    <script type="text/coffeescript" src="{% static "js/main.coffee" %}"></script>
+{% endblock %}

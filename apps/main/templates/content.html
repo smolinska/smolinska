@@ -1,0 +1,96 @@
+{% load static %}
+<div class="row row-content">
+    <div id="main-content">
+        <ul class="cb-slideshow">
+            <li>
+                <span>Image 01</span>
+                <div>
+                    <h3>BOSCH</h3>
+                </div>
+            </li>
+            <li>
+                <span>Image 02</span>
+                <div>
+                    <h3>STIHL</h3>
+                </div>
+            </li>
+            <li>
+                <span>Image 03</span>
+                <div>
+                    <h3>METABO</h3>
+                </div>
+            </li>
+            <li>
+                <span>Image 04</span>
+                <div>
+                    <h3>KERCHER</h3>
+                </div>
+            </li>
+        </ul>
+        {% for tab in tabs %}
+            <div class="section-wrapper">
+                <section id="{{ tab.slug }}" class="content-section text-center">
+                <div class="section-bg"></div>
+                <div class="container">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        {% include tab.template with tab=tab %}
+                    </div>
+                </div>
+            </section>
+            </div>
+            {% if forloop.counter == 1 %}
+                <div class="row red-row over-row counter-row">
+                    <div class="col-md-3  col-md-offset-1 col-sm-12 col-xs-12 red-col">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        <b>1000</b>
+                        <div>produktów</div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 red-col">
+                        <span class="glyphicon glyphicon-tags"></span>
+                        <b>12</b>
+                        <div>marek</div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 red-col">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        <b>1</b>
+                        <div>serwis</div>
+                    </div>
+                </div>
+            {% endif %}
+            {% if forloop.counter == 2 %}
+                <div class="row photo-row over-row">
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="map">
+        <div id="map"></div>
+        <style>
+            #map, .map {
+                height: 400px;
+                width: 100%;
+            }
+        </style>
+        <script src="{% static "js/map.js" %}"></script>
+        <script>
+          function initMap() {
+            var location = {lat: 50.134720, lng: 19.632030};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 14,
+              scrollwheel: false,
+              center: location,
+              styles: window.MAP_STYLE
+            });
+            var marker = new google.maps.Marker({
+              position: location,
+              map: map,
+              icon: '/static/img/map-icon-red.png'
+            });
+          }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj3trRN-BS6gIK7dUUs9jK_u6YPT1CLhQ&callback=initMap">
+        </script>
+    </div>
+    <div class="footer"></div>
+</div>

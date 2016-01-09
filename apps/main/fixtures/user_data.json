@@ -1,0 +1,674 @@
+[
+{
+  "model": "main.orderedmodelex",
+  "pk": 1,
+  "fields": {
+    "order": 0
+  }
+},
+{
+  "model": "main.orderedmodelex",
+  "pk": 2,
+  "fields": {
+    "order": 1
+  }
+},
+{
+  "model": "main.orderedmodelex",
+  "pk": 3,
+  "fields": {
+    "order": 3
+  }
+},
+{
+  "model": "main.orderedmodelex",
+  "pk": 4,
+  "fields": {
+    "order": 2
+  }
+},
+{
+  "model": "main.menuitem",
+  "pk": 1,
+  "fields": {
+    "title": "Serwis",
+    "content": "<p>Prowadzimy profesjonalny, pogwarancyjny serwis elektronarz\u0119dzi i maszyn firm: AEG, Asta, Bison, BMI, Bosch, Dormer, Dremel, Festool, Heller, Jokari, Leica, Metabo, Sandvik, Solga oraz pozosta\u0142ych firm, kt&oacute;rych produkty dost\u0119pne s\u0105 w Naszym sklepie.</p>\r\n\r\n<p><strong>Wykonujemy:</strong><br />\r\nKompleksowe naprawy elektronarz\u0119dzi i maszyn<br />\r\nOkresowe przegl\u0105dy i konserwacje zgodnie z PN<br />\r\nBadanie stanu izolacji narz\u0119dzi<br />\r\nLegalizacje narz\u0119dzi pomiarowych</p>\r\n\r\n<p>Na \u017cyczenie klienta Nasz serwis przeprowadza diagnostyk\u0119 uszkodzonych narz\u0119dzi oraz dokonuje niezb\u0119dnych napraw. Wieloletnie do\u015bwiadczenie Naszych pracownik&oacute;w jest gwarancj\u0105 dobrze i solidnie wykonanej pracy. Pami\u0119taj! Kupuj\u0105c u nas sprz\u0119t, w razie jego awarii nie zostajesz z nim sam. My pomo\u017cemy Ci go naprawi\u0107!</p>",
+    "type": 0
+  }
+},
+{
+  "model": "main.menuitem",
+  "pk": 2,
+  "fields": {
+    "title": "Sklep",
+    "content": "<p>Wsp&oacute;\u0142pracujemy z wieloma liderami tego rynku na \u015bwiecie takimi jak BOSCH, METABO, DeWALT, FESTOOL, STIHL, MASTER. Posiadamy r&oacute;wnie\u017c szerok\u0105&nbsp;ofert\u0119 dla ogrodnictwa i techniki le\u015bnej takich marek jak Stihl, Viking, Makita i Dolmar.</p>\r\n\r\n<p>W naszym sklepie znajd\u0105 Pa\u0144stwo pe\u0142n\u0105&nbsp;ofert\u0119&nbsp;elektronarz\u0119dzi BOSCH:<br />\r\n- elektronarz\u0119dzia profesionalne,<br />\r\n- elektronarz\u0119dzia amatorskie,<br />\r\n- elektronarz\u0119dzia SKIL,<br />\r\n- narz\u0119dzia ogrodowe,<br />\r\n- narz\u0119dzia pomiarowe,<br />\r\n- narzedzia pneumatyczne,<br />\r\n- osprz\u0119t do elektronarz\u0119dzi,<br />\r\n- DREMEL.</p>\r\n\r\n<p>Oferujemy r&oacute;wnie\u017c sprzeda\u017c cz\u0119\u015bci zamiennych do narz\u0119dzi i maszyn zakupionych w Naszej firmie. Ch\u0119tnie pomo\u017cemy w doborze odpowiednich cz\u0119\u015bci!</p>",
+    "type": 0
+  }
+},
+{
+  "model": "main.menuitem",
+  "pk": 4,
+  "fields": {
+    "title": "Galeria",
+    "content": "<p>Tre\u015b\u0107 galerii</p>",
+    "type": 1
+  }
+},
+{
+  "model": "main.menuitem",
+  "pk": 3,
+  "fields": {
+    "title": "Kontakt",
+    "content": "<p><strong>GLE\u0143 RY\u015a</strong></p>\r\n\r\n<p>ul. Daszy\u0144skiego 1&nbsp;<br />\r\n32-065 Krzeszowice</p>\r\n\r\n<p>tel. 012 282 59 88</p>\r\n\r\n<p>e-mail: englenrys@wp.pl</p>",
+    "type": 0
+  }
+},
+{
+  "model": "photologue.gallery",
+  "pk": 1,
+  "fields": {
+    "date_added": "2017-03-01T20:36:16.324Z",
+    "title": "Test gallery 0",
+    "slug": "test-gallery-0",
+    "description": "",
+    "is_public": true,
+    "photos": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.gallery",
+  "pk": 2,
+  "fields": {
+    "date_added": "2017-03-01T20:36:21.882Z",
+    "title": "Test gallery 1",
+    "slug": "test-gallery-1",
+    "description": "",
+    "is_public": true,
+    "photos": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.gallery",
+  "pk": 3,
+  "fields": {
+    "date_added": "2017-03-01T20:36:25.090Z",
+    "title": "Test gallery 2",
+    "slug": "test-gallery-2",
+    "description": "",
+    "is_public": true,
+    "photos": [
+      13,
+      14,
+      15,
+      16
+    ],
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.gallery",
+  "pk": 4,
+  "fields": {
+    "date_added": "2017-03-01T20:36:26.918Z",
+    "title": "Test gallery 3",
+    "slug": "test-gallery-3",
+    "description": "",
+    "is_public": true,
+    "photos": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.gallery",
+  "pk": 5,
+  "fields": {
+    "date_added": "2017-03-01T20:36:30.713Z",
+    "title": "Test gallery 4",
+    "slug": "test-gallery-4",
+    "description": "",
+    "is_public": true,
+    "photos": [
+      21,
+      22,
+      23,
+      24
+    ],
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 1,
+  "fields": {
+    "image": "photologue/photos/test1000x1400_p0_g0.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "1000x1400_p0_g0",
+    "slug": "1000x1400_p0_g0",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:16.792Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 2,
+  "fields": {
+    "image": "photologue/photos/test600x600_p1_g0.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "600x600_p1_g0",
+    "slug": "600x600_p1_g0",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:18.948Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 3,
+  "fields": {
+    "image": "photologue/photos/test1000x1400_p2_g0.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "1000x1400_p2_g0",
+    "slug": "1000x1400_p2_g0",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:20.384Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 4,
+  "fields": {
+    "image": "photologue/photos/test700x800_p3_g0.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "700x800_p3_g0",
+    "slug": "700x800_p3_g0",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:21.050Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 5,
+  "fields": {
+    "image": "photologue/photos/test500x400_p4_g0.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "500x400_p4_g0",
+    "slug": "500x400_p4_g0",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:21.424Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 6,
+  "fields": {
+    "image": "photologue/photos/test600x600_p5_g0.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "600x600_p5_g0",
+    "slug": "600x600_p5_g0",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:21.705Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 7,
+  "fields": {
+    "image": "photologue/photos/test900x1200_p0_g1.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "900x1200_p0_g1",
+    "slug": "900x1200_p0_g1",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:22.018Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 8,
+  "fields": {
+    "image": "photologue/photos/test900x1200_p1_g1.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "900x1200_p1_g1",
+    "slug": "900x1200_p1_g1",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:22.555Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 9,
+  "fields": {
+    "image": "photologue/photos/test900x1200_p2_g1.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "900x1200_p2_g1",
+    "slug": "900x1200_p2_g1",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:22.967Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 10,
+  "fields": {
+    "image": "photologue/photos/test1100x1600_p3_g1.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "1100x1600_p3_g1",
+    "slug": "1100x1600_p3_g1",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:23.667Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 11,
+  "fields": {
+    "image": "photologue/photos/test1000x1400_p4_g1.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "1000x1400_p4_g1",
+    "slug": "1000x1400_p4_g1",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:24.464Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 12,
+  "fields": {
+    "image": "photologue/photos/test500x400_p5_g1.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "500x400_p5_g1",
+    "slug": "500x400_p5_g1",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:24.971Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 13,
+  "fields": {
+    "image": "photologue/photos/test600x600_p0_g2.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "600x600_p0_g2",
+    "slug": "600x600_p0_g2",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:25.221Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 14,
+  "fields": {
+    "image": "photologue/photos/test1100x1600_p1_g2.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "1100x1600_p1_g2",
+    "slug": "1100x1600_p1_g2",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:25.597Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 15,
+  "fields": {
+    "image": "photologue/photos/test900x1200_p2_g2.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "900x1200_p2_g2",
+    "slug": "900x1200_p2_g2",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:26.089Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 16,
+  "fields": {
+    "image": "photologue/photos/test900x1200_p3_g2.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "900x1200_p3_g2",
+    "slug": "900x1200_p3_g2",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:26.566Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 17,
+  "fields": {
+    "image": "photologue/photos/test700x800_p0_g3.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "700x800_p0_g3",
+    "slug": "700x800_p0_g3",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:27.138Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 18,
+  "fields": {
+    "image": "photologue/photos/test700x800_p1_g3.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "700x800_p1_g3",
+    "slug": "700x800_p1_g3",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:27.837Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 19,
+  "fields": {
+    "image": "photologue/photos/test1100x1600_p2_g3.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "1100x1600_p2_g3",
+    "slug": "1100x1600_p2_g3",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:28.566Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 20,
+  "fields": {
+    "image": "photologue/photos/test1100x1600_p3_g3.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "1100x1600_p3_g3",
+    "slug": "1100x1600_p3_g3",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:29.350Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 21,
+  "fields": {
+    "image": "photologue/photos/test600x600_p0_g4.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "600x600_p0_g4",
+    "slug": "600x600_p0_g4",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:30.864Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 22,
+  "fields": {
+    "image": "photologue/photos/test500x400_p1_g4.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "500x400_p1_g4",
+    "slug": "500x400_p1_g4",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:31.164Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 23,
+  "fields": {
+    "image": "photologue/photos/test1100x1600_p2_g4.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "1100x1600_p2_g4",
+    "slug": "1100x1600_p2_g4",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:31.422Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 24,
+  "fields": {
+    "image": "photologue/photos/test500x400_p3_g4.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "500x400_p3_g4",
+    "slug": "500x400_p3_g4",
+    "caption": "",
+    "date_added": "2017-03-01T20:36:31.741Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photosize",
+  "pk": 1,
+  "fields": {
+    "name": "admin_thumbnail",
+    "width": 100,
+    "height": 75,
+    "quality": 70,
+    "upscale": false,
+    "crop": true,
+    "pre_cache": true,
+    "increment_count": false,
+    "effect": null,
+    "watermark": null
+  }
+},
+{
+  "model": "photologue.photosize",
+  "pk": 2,
+  "fields": {
+    "name": "thumbnail",
+    "width": 100,
+    "height": 75,
+    "quality": 70,
+    "upscale": false,
+    "crop": true,
+    "pre_cache": true,
+    "increment_count": false,
+    "effect": null,
+    "watermark": null
+  }
+},
+{
+  "model": "photologue.photosize",
+  "pk": 3,
+  "fields": {
+    "name": "display",
+    "width": 400,
+    "height": 0,
+    "quality": 70,
+    "upscale": false,
+    "crop": false,
+    "pre_cache": true,
+    "increment_count": true,
+    "effect": null,
+    "watermark": null
+  }
+}
+]
