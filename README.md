@@ -51,3 +51,4 @@ To create example galeries run: `python manage.py make_gallery` (useful for work
 
 
 
+# smolinska
