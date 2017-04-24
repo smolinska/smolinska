@@ -16,7 +16,8 @@ html {
 body {
   min-height: 100vh;
   position: relative;
-  color: $textColor;
+  background-color: $mainColor;
+  color: $darkColor;
   font-size: 1.2em;
   font-family: 'Poiret One', cursive;
 }
@@ -45,7 +46,7 @@ h2 {
   bottom: $footerHeight;
   right: 0;
   font-size: 0.6em;
-  color: #ddd;
+  color: $darkColor;
   padding: 5px;
   line-height: initial;
   text-shadow: 0 0 4px #444;

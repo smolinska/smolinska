@@ -1,3 +1,10 @@
+@import "variables";
+
+$time_for_each_img: 6s;
+$images_count: 3;
+$images_path: '../img/0';
+$animation_time: $images_count * $time_for_each_img;
+
 .cb-slideshow, .cb-slideshow:after {
   z-index: 160;
   position: relative;
@@ -5,6 +12,7 @@
   width: 100%;
   height: 80vh;
   list-style-type: none;
+  padding: 0;
 }
 
 .cb-slideshow:after {
@@ -27,48 +35,62 @@
   background-repeat: none;
   opacity: 0;
   z-index: 0;
-  animation: imageAnimation 24s linear infinite 0s;
+  animation: imageAnimation 18s linear infinite 0s;
+}
+
+.cb-slideshow li {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .cb-slideshow li div {
   z-index: 1000;
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  width: 100%;
   text-align: center;
   opacity: 0;
-  color: #fff;
-  animation: titleAnimation 24s linear infinite 0s;
+  color: #ffe7ee;
+  animation: titleAnimation 18s linear infinite 0s;
+}
+
+.cb-slideshow li div h4 {
+  font-weight: 600;
+  letter-spacing: 15px;
+  font-size: 60px !important;
+  padding: 0;
+  //line-height: 500px;
+  text-shadow: 2px 2px 10px rgb(42, 42, 42);
+  //line-height: 50vh;
 }
 
 .cb-slideshow li div h3 {
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 15px;
-  font-size: 240px;
+  font-size: 40px !important;
   padding: 0;
-  line-height: 200px;
-  text-shadow: 1px 1px 10px rgb(74, 74, 74);
+  //line-height: 500px;
+  text-shadow: 2px 2px 10px rgb(42, 42, 42);
+  //line-height: 30vh;
 }
 
+
 .cb-slideshow li:nth-child(1) span {
-  background-image: url('../img/bosch.jpg');
+  background-image: url('../img/01.jpg');
 }
 
 .cb-slideshow li:nth-child(2) span {
-  background-image: url('../img/stihl1.jpg');
+  background-image: url('../img/02.jpg');
   animation-delay: 6s;
 }
 
 .cb-slideshow li:nth-child(3) span {
-  background-image: url('../img/metabo.jpg');
+  background-image: url('../img/03.jpg');
   animation-delay: 12s;
 }
 
-.cb-slideshow li:nth-child(4) span {
-  background-image: url('../img/karcher.jpg');
-  animation-delay: 18s;
-}
 
 .cb-slideshow li:nth-child(2) div {
   animation-delay: 6s;
@@ -76,10 +98,6 @@
 
 .cb-slideshow li:nth-child(3) div {
   animation-delay: 12s;
-}
-
-.cb-slideshow li:nth-child(4) div {
-  animation-delay: 18s;
 }
 
 @keyframes imageAnimation {
@@ -124,12 +142,41 @@
   opacity: 1;
 }
 
-.cb-slideshow li div h3 {
-  font-size: 140px
-}
 
 @media screen and (max-width: 600px) {
   .cb-slideshow li div h3 {
-    font-size: 80px
+    font-size: 30px;
+  }
+}
+
+
+@for $i from 1 through $images_count {
+  .bg-slideshow li:nth-child(#{$i}) {
+    @include animation-delay(($i - 1) * $time_for_each_img);
+    @media (max-width: $screen-xs-max) {
+      background-image: url(#{$images_path}#{$i}_xs.jpg);
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+      background-image: url(#{$images_path}#{$i}_md.jpg);
+    }
+    @media (min-width: $screen-lg-min) {
+      background-image: url(#{$images_path}#{$i}.jpg);
+    }
+  }
+}
+
+@include keyframes(imageAnimation) {
+  0% {
+    transform: translateX(0);
+  }
+  #{100*$time_for_each_img/$animation_time}% {
+    transform: translateX(0);
+  }
+  #{150*$time_for_each_img/$animation_time}% {
+    transform: translateX(-100%);
+    z-index: -1;
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
