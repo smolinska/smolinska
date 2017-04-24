@@ -1,3 +1,4 @@
+@import "static/lib/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "variables";
 
 $time_for_each_img: 6s;
@@ -13,14 +14,18 @@ $animation_time: $images_count * $time_for_each_img;
   height: 80vh;
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-.cb-slideshow:after {
+.cb-slideshow span:after {
+  z-index: 10;
   top: 0;
   left: 0;
   position: absolute;
   content: '';
   background: url('../img/pattern.png') repeat top left;
+  width: 100%;
+    height: 100%;
 }
 
 .cb-slideshow li span {
@@ -33,9 +38,7 @@ $animation_time: $images_count * $time_for_each_img;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: none;
-  opacity: 0;
   z-index: 0;
-  animation: imageAnimation 18s linear infinite 0s;
 }
 
 .cb-slideshow li {
@@ -46,14 +49,14 @@ $animation_time: $images_count * $time_for_each_img;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  opacity: 0;
+  animation: imageAnimation $animation_time linear infinite 0s;
 }
 
 .cb-slideshow li div {
   z-index: 1000;
   text-align: center;
-  opacity: 0;
   color: #ffe7ee;
-  animation: titleAnimation 18s linear infinite 0s;
 }
 
 .cb-slideshow li div h4 {
@@ -77,67 +80,6 @@ $animation_time: $images_count * $time_for_each_img;
 }
 
 
-.cb-slideshow li:nth-child(1) span {
-  background-image: url('../img/01.jpg');
-}
-
-.cb-slideshow li:nth-child(2) span {
-  background-image: url('../img/02.jpg');
-  animation-delay: 6s;
-}
-
-.cb-slideshow li:nth-child(3) span {
-  background-image: url('../img/03.jpg');
-  animation-delay: 12s;
-}
-
-
-.cb-slideshow li:nth-child(2) div {
-  animation-delay: 6s;
-}
-
-.cb-slideshow li:nth-child(3) div {
-  animation-delay: 12s;
-}
-
-@keyframes imageAnimation {
-  0% {
-    opacity: 0;
-    animation-timing-function: ease-in;
-  }
-  8% {
-    opacity: 1;
-    animation-timing-function: ease-out;
-  }
-  17% {
-    opacity: 1
-  }
-  25% {
-    opacity: 0
-  }
-  100% {
-    opacity: 0
-  }
-}
-
-@keyframes titleAnimation {
-  0% {
-    opacity: 0
-  }
-  8% {
-    opacity: 1
-  }
-  17% {
-    opacity: 1
-  }
-  19% {
-    opacity: 0
-  }
-  100% {
-    opacity: 0
-  }
-}
-
 .no-cssanimations .cb-slideshow li span {
   opacity: 1;
 }
@@ -151,32 +93,40 @@ $animation_time: $images_count * $time_for_each_img;
 
 
 @for $i from 1 through $images_count {
-  .bg-slideshow li:nth-child(#{$i}) {
-    @include animation-delay(($i - 1) * $time_for_each_img);
-    @media (max-width: $screen-xs-max) {
-      background-image: url(#{$images_path}#{$i}_xs.jpg);
-    }
-    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
-      background-image: url(#{$images_path}#{$i}_md.jpg);
-    }
-    @media (min-width: $screen-lg-min) {
-      background-image: url(#{$images_path}#{$i}.jpg);
+  .cb-slideshow li:nth-child(#{$i}) {
+    animation-delay: ($i - 1) * $time_for_each_img;
+    span {
+      @media (max-width: $screen-xs-max) {
+        background-image: url(#{$images_path}#{$i}_xs.jpg);
+      }
+      @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+        background-image: url(#{$images_path}#{$i}_md.jpg);
+      }
+      @media (min-width: $screen-lg-min) {
+        background-image: url(#{$images_path}#{$i}.jpg);
+      }
     }
   }
 }
 
-@include keyframes(imageAnimation) {
+@keyframes imageAnimation {
   0% {
-    transform: translateX(0);
+    opacity: 0;
   }
-  #{100*$time_for_each_img/$animation_time}% {
-    transform: translateX(0);
+  //animation LOADING time
+  #{100%*$time_for_each_img/4/$animation_time} {
+    opacity: 1;
   }
-  #{150*$time_for_each_img/$animation_time}% {
-    transform: translateX(-100%);
-    z-index: -1;
+  //animation IN time
+  #{300%*$time_for_each_img/4/$animation_time} {
+    opacity: 1;
   }
+  //animation OUTING time
+  #{100%*$time_for_each_img/$animation_time} {
+    opacity: 0;
+  }
+  //animation OFF
   100% {
-    transform: translateX(-100%);
+    opacity: 0;
   }
 }
