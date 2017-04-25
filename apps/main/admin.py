@@ -6,7 +6,7 @@ from photologue.admin import PhotoAdmin
 from photologue.models import Watermark, PhotoEffect
 
 from apps.main.extra_logic import obfuscate_emails, deobfuscate_emails
-from apps.main.models import MenuItem
+from apps.main.models import MenuItem, Project
 
 # disabling redundant auth admin stuff
 admin.site.unregister(Group)
@@ -23,6 +23,24 @@ class MenuItemAdmin(OrderedModelAdmin):
         if obj is not None:
             obj.content = deobfuscate_emails(obj.content)
         return super(MenuItemAdmin, self).get_form(request, obj, **kwargs)
+
+
+class ProjectAdmin(OrderedModelAdmin):
+    list_display = (
+        'order',
+        'start_date',
+        'end_date',
+        'name',
+        'description',
+        'type',
+        'move_up_down_links',
+    )
+    list_filter = ('start_date', 'end_date')
+    raw_id_fields = ('images', 'technologies')
+    search_fields = ('name',)
+
+
+admin.site.register(Project, ProjectAdmin)
 
 
 admin.site.register(MenuItem, MenuItemAdmin)

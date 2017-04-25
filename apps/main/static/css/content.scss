@@ -10,10 +10,11 @@
 
 section{
   opacity: 0;
-  transform: translateY(500px);
-  transition: opacity 1s ease, transform .5s ease;
+  transform: translateX(-250px);
+  transition: opacity 1.5s ease, transform 0.8s ease;
   &.loaded{
     opacity: 1;
     transform: translateY(0);
   }
 }
+

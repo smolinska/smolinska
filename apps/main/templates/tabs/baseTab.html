@@ -1,2 +1,4 @@
 <h2>{{ tab.title }}</h2>
-{% autoescape off %}{{ tab.content }}{% endautoescape %}
+{% block content %}
+    {% autoescape off %}{{ tab.content }}{% endautoescape %}
+{% endblock %}

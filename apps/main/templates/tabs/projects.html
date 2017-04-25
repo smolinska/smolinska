@@ -1,0 +1,29 @@
+{% extends 'tabs/baseTab.html' %}
+{% block content %}
+    <div class="projects">
+        {% for project in projects %}
+            <div class="row project">
+                <div class="col-md-4">
+                    <a href="{{ project.link }}">
+                        <img class="project-img" src="{{ project.images.first.image.url }}">
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <h3>{{ project.name }}</h3>
+                    {% autoescape off %}{{ project.description }}{% endautoescape %}
+                </div>
+                <div class="foot clearfix">
+                    {% if project.repository %}
+                        <a href="{{ project.repository }}" class="pull-left">
+                            It's public on
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                    {% endif %}
+                    {% for tech in project.technologies.all %}
+                        <img class="pull-right" src="{{ tech.icon_url }}" title="{{ tech.name }}">
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

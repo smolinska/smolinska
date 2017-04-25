@@ -90,6 +90,12 @@ COMPRESS_PRECOMPILERS = (
 
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'allowedContent':'i',
+    },
+}
+
 SITE_URL = 'http://www.sliczna36.pl'  # DO NOT END IT WITH SLASH!
 
 SECURE_CONTENT_TYPE_NOSNIFF = True

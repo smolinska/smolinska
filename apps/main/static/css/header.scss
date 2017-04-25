@@ -13,7 +13,9 @@ nav.navbar {
   background: linear-gradient(to bottom, #333333 0%, #141414 100%);
   text-transform: uppercase;
   font-weight: bold;
-  border-bottom-color: lightgray;
+  border-bottom-style: solid;
+  border-bottom-width: 100%;
+  border-bottom-color: rgba(249, 225, 232, 0.65);
 
   li {
     transition: all 0.6s ease;
@@ -26,7 +28,7 @@ nav.navbar {
     }
 
     & > a {
-      color: #ffdceb;
+      color: $textColor;
       font-size: 1.1em;
       line-height: $navbarHeight;
       padding: 0 30px;
@@ -34,8 +36,16 @@ nav.navbar {
   }
 }
 
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: $darkColor;
+}
+
 .logo {
-  color: darken($mainColor, 50%);
+  color: $mainColor;
+  text-shadow: -1px -1px 2px rgba(163, 130, 159, 0.92);
+  font-weight: bolder;
+  font-size: 1.5em;
   line-height: $navbarHeight;
   padding-left: 30px;
   padding-right: 30px;

@@ -41,6 +41,38 @@
     background: url('../img/pattern.png') repeat top left;
     height: 100%;
     width: 100%;
+  }
+}
 
+//PROJECTS
+.projects {
+  width: 100%;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+  text-align: left;
+  outline: solid;
+  outline-width: 1px;
+  outline-color: rgba(249, 225, 232, 0.65);
+  outline-offset: 15px;
+  h3 {
+    font-weight: bold;
+  }
+}
+
+.project-img {
+  width: 100%;
+}
+
+//CONTACT
+.contact-link, {
+  list-style-type: none;
+  a {
+    color: $textColor;
+    font-size: 1.2em;
   }
 }

@@ -6,7 +6,7 @@ from django.views.generic import TemplateView
 from photologue.models import Gallery
 
 from apps.main.extra_logic import parse_SCSS_variables, find_custom_template
-from apps.main.models import MenuItem
+from apps.main.models import MenuItem, Project
 
 
 class MainView(TemplateView):
@@ -35,6 +35,7 @@ class MainView(TemplateView):
             "analytics_id": settings.GOOGLE_ANALYTICS_ID,
             "production": not settings.DEBUG,
             "js_vars": self.js_vars,
+            "projects": Project.objects.all(),
         }
 
         return self.render_to_response(context)
