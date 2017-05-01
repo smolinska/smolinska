@@ -7,19 +7,20 @@ window.scrollHandler = function () {
             called = true
         }
     }
-
+//NAVBAR TRACKING
     $('section').scrollfire({
 
         // Offsets
         offset: 0,
-        topOffset: 300,
-        bottomOffset: 250,
+        topOffset: 500,
+        bottomOffset: 500,
 
-        onTopOut: activateSection,
-        onBottomOut: activateSection,
+        onTopIn: activateSection,
+        onBottomIn: activateSection,
     });
 
-    function activateSection(elm) {
+    function activateSection(elm,a,b) {
+        console.log(elm,a,b);
         var hash = '#' + elm.id;
         $('ul.nav li').removeClass('active');
         $('ul.nav li a[href="' + hash + '"]').parent().addClass('active')
@@ -39,7 +40,7 @@ window.scrollHandler = function () {
         $(elm).find('section').addClass('loaded')
     }
 
-
+//TRANSFORM LOADING
     $('.counter-row').scrollfire({
 
         // Offsets

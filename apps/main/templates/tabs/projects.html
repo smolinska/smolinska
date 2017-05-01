@@ -3,12 +3,12 @@
     <div class="projects">
         {% for project in projects %}
             <div class="row project">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-12">
                     <a href="{{ project.link }}">
                         <img class="project-img" src="{{ project.images.first.image.url }}">
                     </a>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 col-sm-12">
                     <h3>{{ project.name }}</h3>
                     {% autoescape off %}{{ project.description }}{% endautoescape %}
                 </div>

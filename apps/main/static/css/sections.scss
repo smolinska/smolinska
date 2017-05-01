@@ -1,7 +1,7 @@
 @import "variables";
 
 .content-section {
-  padding: 100px 0;
+  padding: 150px 0;
 }
 
 .section {
@@ -10,10 +10,8 @@
 }
 
 .section-wrapper {
-
   color: #ffccef;
   display: flex;
-  padding: 0 200px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -53,7 +51,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  width: 100%;
   text-align: left;
   outline: solid;
   outline-width: 1px;
@@ -69,7 +66,7 @@
 }
 
 //CONTACT
-.contact-link, {
+.contact-link{
   list-style-type: none;
   a {
     color: $textColor;

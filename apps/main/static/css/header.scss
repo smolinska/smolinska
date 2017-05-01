@@ -36,17 +36,34 @@ nav.navbar {
   }
 }
 
-.nav>li>a:focus, .nav>li>a:hover {
+.nav>li>a:focus, .nav>li>a:hover, .nav>li:focus {
     text-decoration: none;
-    background-color: $darkColor;
+    background-color: transparent;
+  outline: none;
 }
 
 .logo {
   color: $mainColor;
   text-shadow: -1px -1px 2px rgba(163, 130, 159, 0.92);
   font-weight: bolder;
-  font-size: 1.5em;
+  font-size: 1.8em;
   line-height: $navbarHeight;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.hamburger{
+  color: $textColor;
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:5px 15px 0px 15px;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:50000;
 }
