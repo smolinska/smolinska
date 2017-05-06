@@ -24,15 +24,6 @@ Implemented stuff:
 - Obfuscating emails after content is eddited
 - Parsing `varieables.scss` so it's declarations are avaiable in JS
 
-##Setting up ( use yarn it's much faster )
-```bash
-npm install -g yarn
-yarn global add coffee-script bower
-yarn
-bower install
-sudo apt-get install ruby-sass # TODO: Move to gulp
-
-```
 
 ### On windows
 Get compiled **Pillow** from http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow
@@ -43,12 +34,34 @@ pip install rjsmin rcssmin --install-option="--without-c-extensions"
 ```
 
 ##Development
+```bash
+git clone git@bitbucket.org:alpakara/django-sites.git
+git submodule init
+git submodule update
+```
+
 Fixtures:
 - `python manage.py load`
 - `python manage.py save`
+
+
+[Get Yarn](https://yarnpkg.com/en/docs/install#linux-tab)
+``` bash
+sudo yarn global add bower gulp-cli coffee-script
+yarn install
+bower install
+
+mkvirtualenv rybitwy --python=`which python3`
+pip install -r requirements.txt
+
+./manage.py migrate
+./manage.py load
+./manage.py make_gallery
+
+gulp
+```
 
 To create example galeries run: `python manage.py make_gallery` (useful for working on UI)
 
 
 
-# smolinska
