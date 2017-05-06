@@ -1,13 +1,9 @@
-from os.path import basename
-
-from project.settings.base import *
+from scripts_configs.common.demo import *
 
 DEBUG = False
-host = 'alpakara.pl'
-ALLOWED_HOSTS = [host, 'www.' + host]
 GOOGLE_ANALYTICS_ID = ''
-
-MEDIA_URL = 'http://{}/demo/{}/media/'.format(host, basename(BASE_DIR))
+COMPRESS_ENABLED = False
+INSTALLED_APPS.remove('django_gulp')
 
 INSTALLED_APPS.remove('django_gulp')
 

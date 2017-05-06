@@ -20,11 +20,13 @@ from django.contrib import admin
 
 from apps.main.views import MainView, GalleryView
 
+base = getattr(settings, 'BASE_URL', '')
+
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', MainView.as_view(), name='main'),
-    url(r'^gallery/', GalleryView.as_view(), name='gallery'),
-    url(r'^photologue/', include('photologue.urls', namespace='photologue'))
+    url(r'^{}admin/'.format(base), include(admin.site.urls)),
+    url(r'^{}$'.format(base), MainView.as_view(), name='main'),
+    url(r'^{}gallery/'.format(base), GalleryView.as_view(), name='gallery'),
+    url(r'^{}photologue/'.format(base), include('photologue.urls', namespace='photologue'))
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
