@@ -38,6 +38,9 @@ pip install rjsmin rcssmin --install-option="--without-c-extensions"
 git clone git@bitbucket.org:alpakara/django-sites.git
 git submodule init
 git submodule update
+cd scripts_configs
+git checkout master
+cd ..
 ```
 
 Fixtures:
