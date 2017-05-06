@@ -62,11 +62,20 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pl-PL'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
+LANGUAGES = (
+    ('pl', _('Polish')),
+    ('en', _('English')),
+)
+LOCALE_PATHS = (
+    op.join(BASE_DIR, "locale"),
+    # op.join(BASE_DIR, "youra/locale"),#TODO: Co to jest???
+)
+USE_THOUSAND_SEPARATOR = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
@@ -89,6 +98,11 @@ COMPRESS_PRECOMPILERS = (
 )
 
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+CKEDITOR_CONFIGS = {
+    "default": {
+        "extraAllowedContent": '*[id]'
+    }
+}
 
 CKEDITOR_CONFIGS = {
     'default': {

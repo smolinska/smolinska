@@ -9,3 +9,8 @@ def divide(value, arg):
         return int(value) // int(arg)
     except (ValueError, ZeroDivisionError):
         return None
+
+
+@register.filter
+def get_item(dictionary, key):
+    return dictionary.get(key)

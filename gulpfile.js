@@ -35,3 +35,9 @@ gulp.task('build', ['prod']);
 gulp.task('prod', ['sass'], function () {
 //    TODO: Add minification
 });
+
+gulp.task('build', ['prod']);
+
+gulp.task('prod', ['sass'], function () {
+//    TODO: Add minification
+});

@@ -2,6 +2,7 @@
 self = {}
 self.allImagesLoaded = ($container) ->
   loaded = new $.Deferred()
+  #  TODO Count already loaded images
   #      $live = $('<div>').html(data)
   #      totalImgCount = $live.find('img').length
   totalImgCount = $container.find('img').length
@@ -21,6 +22,13 @@ self.makeProgressBar = ($bar) ->
     step: (p)-> $inner.width("#{p}%"); return
     hide: -> $bar.fadeOut().promise().then(-> $inner.width("0%"))
   }
+
+self.progressImagesLoading = ($container, progressBar, callback)->
+  utils.allImagesLoaded($container).progress((p)->
+      progressBar.step(p * 100)
+    ).done(() ->
+      progressBar.hide().then(callback)
+    )
 
 self.hoverableDropdowns = ($nav) ->
   if window.screen.availWidth >= 800
