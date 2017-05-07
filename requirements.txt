@@ -14,3 +14,6 @@ slimit
 
 Fabric3
 fabric3-virtualenv
+
+gunicorn
+setproctitle
