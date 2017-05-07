@@ -1,7 +1,29 @@
 from project.settings.base import *
 
 DEBUG = False
-ALLOWED_HOSTS = ['domain']
+# TODO: DRY in fabric files
+ALLOWED_HOSTS = ['smolinska.eu', 'www.smolinska.eu']
 GOOGLE_ANALYTICS_ID = ''
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': 'logs/debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
+
 
 # COMPRESS_OFFLINE = True
