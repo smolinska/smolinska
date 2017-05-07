@@ -1,6 +1,6 @@
 {% load static %}
 <div class="row row-content">
-    <div id="main-content">
+    <div id="main-content" class="col-sm-12">
         <ul class="cb-slideshow">
 
             <li>
@@ -28,16 +28,19 @@
         {% for tab in tabs %}
             <div class="section-wrapper">
                 <section id="{{ tab.slug }}" class="content-section text-center">
-                <div class="section-bg"></div>
-                <div class="container">
-                    <div class="col-lg-12">
-                        {% include tab.template with tab=tab %}
+                    <div class="section-bg"></div>
+                    <div class="container">
+                        <div class="col-lg-12">
+                            {% include tab.template with tab=tab %}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
             </div>
         {% endfor %}
     </div>
-
+    <button type="button" class="btn btn-primary button-ali" data-toggle="popover" data-placement="left"
+            data-content="Ski boots are for skiing... duh!">
+        <img src="{% static 'img/ali.svg' %}">
+    </button>
     <div class="footer"></div>
 </div>

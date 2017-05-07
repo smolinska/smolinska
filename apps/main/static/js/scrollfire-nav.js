@@ -22,8 +22,8 @@ window.scrollHandler = function () {
     function activateSection(elm,a,b) {
         console.log(elm,a,b);
         var hash = '#' + elm.id;
-        $('ul.nav li').removeClass('active');
-        $('ul.nav li a[href="' + hash + '"]').parent().addClass('active')
+        $('ul.navbar-nav li a').removeClass('active');
+        $('ul.navbar-nav li a[href="' + hash + '"]').addClass('active')
     }
 
     $('.section-wrapper').scrollfire({

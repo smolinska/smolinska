@@ -1,69 +1,39 @@
 @import "variables";
 
-
-.navbar-fixed-top {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-
 nav.navbar {
-  margin-bottom: 0;
   background: linear-gradient(to bottom, #333333 0%, #141414 100%);
   text-transform: uppercase;
   font-weight: bold;
   border-bottom-style: solid;
-  border-bottom-width: 100%;
   border-bottom-color: rgba(249, 225, 232, 0.65);
-
-  li {
+  li > a {
     transition: all 0.6s ease;
+    color: $textColor;
+    font-size: 1.1em;
+    line-height: $navbarHeight;
+    text-shadow: 2px 2px 5px rgba(89, 0, 61, 0.92);
+    text-align: right; //align for hamburger
     &:hover, &.active {
       background-color: $mainColor;
-      & > a {
-        background-color: transparent !important;
-        text-shadow: 2px 2px 5px rgba(89, 0, 61, 0.92);
-      }
-    }
-
-    & > a {
-      color: $textColor;
-      font-size: 1.1em;
-      line-height: $navbarHeight;
-      padding: 0 30px;
     }
   }
 }
 
-.nav>li>a:focus, .nav>li>a:hover, .nav>li:focus {
-    text-decoration: none;
-    background-color: transparent;
-  outline: none;
-}
-
 .logo {
-  color: $mainColor;
   text-shadow: -1px -1px 2px rgba(163, 130, 159, 0.92);
   font-weight: bolder;
   font-size: 1.8em;
   line-height: $navbarHeight;
-  padding-left: 30px;
-  padding-right: 30px;
+  &:hover, &:focus {
+    color: $mainColor;
+  }
 }
 
-.hamburger{
+.navbar-toggler {
   color: $textColor;
-  background:none;
-  position:absolute;
-  top:0;
-  right:0;
-  line-height:45px;
-  padding:5px 15px 0px 15px;
-  border:0;
-  font-size:1.4em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:50000;
+  font-size: 1.4em;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  line-height: $navbarHeight;
 }

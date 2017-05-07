@@ -1,32 +1,21 @@
 {% load staticfiles %}
-<div class="row">
-    <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-            {#            <a href="#" class="page-scroll"><div class="logo pull-left">Smolińska</div></a>#}
-            <div class="navbar-header">
-                <a href="#" class="page-scroll">
-                    <div class="logo pull-left">Smolińska</div>
-                </a>
-                <button type="button" class="hamburger navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">&#9776;
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse pull-right">
-                <ul class="nav navbar-nav">
-                    {% for tab in tabs %}
-                        <li role="presentation">
-                            <a href="#{{ tab.slug }}" class="page-scroll" aria-controls="{{ tab.slug }}"
-                               data-toggle="tab" data-type="{{ tab.type }}">
-                                {{ tab.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-    </nav>
-</div>
+<nav class="navbar navbar-toggleable-sm fixed-top py-0">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <a class="navbar-brand pl-4 logo" href="#">Smolińska</a>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+            {% for tab in tabs %}
+                <li class="nav-item">
+                    <a href="#{{ tab.slug }}" class="page-scroll nav-link px-4" aria-controls="{{ tab.slug }}"
+                       data-toggle="tab" data-type="{{ tab.type }}">
+                        {{ tab.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

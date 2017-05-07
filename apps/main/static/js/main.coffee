@@ -13,6 +13,7 @@ $nav = undefined
 $(()->
   $nav = $('.navbar')
   $nav.stickyTabs()
+  $('[data-toggle="popover"]').popover()
 )
 $(window).load(()->
   window.scrollHandler()
