@@ -4,6 +4,7 @@ DEBUG = False
 # TODO: DRY in fabric files
 ALLOWED_HOSTS = ['smolinska.eu', 'www.smolinska.eu']
 GOOGLE_ANALYTICS_ID = ''
+INSTALLED_APPS.remove('django_gulp')
 
 
 LOGGING = {

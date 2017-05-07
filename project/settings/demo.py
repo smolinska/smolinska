@@ -5,8 +5,6 @@ GOOGLE_ANALYTICS_ID = ''
 COMPRESS_ENABLED = False
 INSTALLED_APPS.remove('django_gulp')
 
-INSTALLED_APPS.remove('django_gulp')
-
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
