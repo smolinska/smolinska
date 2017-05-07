@@ -4,4 +4,4 @@ from django.core.management import BaseCommand, call_command
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        call_command('dumpdata', 'main', 'photologue', output=settings.FIXTURE_FILE_PATH, indent=2)
+        call_command('dumpdata', 'main', output=settings.FIXTURE_FILE_PATH, indent=2)

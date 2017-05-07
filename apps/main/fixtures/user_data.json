@@ -28,11 +28,39 @@
   }
 },
 {
+  "model": "main.orderedmodelex",
+  "pk": 5,
+  "fields": {
+    "order": 0
+  }
+},
+{
+  "model": "main.orderedmodelex",
+  "pk": 6,
+  "fields": {
+    "order": 1
+  }
+},
+{
+  "model": "main.orderedmodelex",
+  "pk": 7,
+  "fields": {
+    "order": 2
+  }
+},
+{
+  "model": "main.orderedmodelex",
+  "pk": 8,
+  "fields": {
+    "order": 3
+  }
+},
+{
   "model": "main.menuitem",
   "pk": 1,
   "fields": {
-    "title": "Serwis",
-    "content": "<p>Prowadzimy profesjonalny, pogwarancyjny serwis elektronarz\u0119dzi i maszyn firm: AEG, Asta, Bison, BMI, Bosch, Dormer, Dremel, Festool, Heller, Jokari, Leica, Metabo, Sandvik, Solga oraz pozosta\u0142ych firm, kt&oacute;rych produkty dost\u0119pne s\u0105 w Naszym sklepie.</p>\r\n\r\n<p><strong>Wykonujemy:</strong><br />\r\nKompleksowe naprawy elektronarz\u0119dzi i maszyn<br />\r\nOkresowe przegl\u0105dy i konserwacje zgodnie z PN<br />\r\nBadanie stanu izolacji narz\u0119dzi<br />\r\nLegalizacje narz\u0119dzi pomiarowych</p>\r\n\r\n<p>Na \u017cyczenie klienta Nasz serwis przeprowadza diagnostyk\u0119 uszkodzonych narz\u0119dzi oraz dokonuje niezb\u0119dnych napraw. Wieloletnie do\u015bwiadczenie Naszych pracownik&oacute;w jest gwarancj\u0105 dobrze i solidnie wykonanej pracy. Pami\u0119taj! Kupuj\u0105c u nas sprz\u0119t, w razie jego awarii nie zostajesz z nim sam. My pomo\u017cemy Ci go naprawi\u0107!</p>",
+    "title": "About me",
+    "content": "<p>I am rising web developer.</p>\r\n\r\n<p>I am hydrogeologist.</p>\r\n\r\n<p>I like&nbsp;to experiment with styles &amp; design.</p>\r\n\r\n<p>I create sites for private clients.</p>\r\n\r\n<p>I develop simple JS games &amp; cats apps.</p>\r\n\r\n<p>I am playing a little with Python.</p>\r\n\r\n<p>I am eager to try out Django.</p>",
     "type": 0
   }
 },
@@ -40,7 +68,7 @@
   "model": "main.menuitem",
   "pk": 2,
   "fields": {
-    "title": "Sklep",
+    "title": "Projects",
     "content": "<p>Wsp&oacute;\u0142pracujemy z wieloma liderami tego rynku na \u015bwiecie takimi jak BOSCH, METABO, DeWALT, FESTOOL, STIHL, MASTER. Posiadamy r&oacute;wnie\u017c szerok\u0105&nbsp;ofert\u0119 dla ogrodnictwa i techniki le\u015bnej takich marek jak Stihl, Viking, Makita i Dolmar.</p>\r\n\r\n<p>W naszym sklepie znajd\u0105 Pa\u0144stwo pe\u0142n\u0105&nbsp;ofert\u0119&nbsp;elektronarz\u0119dzi BOSCH:<br />\r\n- elektronarz\u0119dzia profesionalne,<br />\r\n- elektronarz\u0119dzia amatorskie,<br />\r\n- elektronarz\u0119dzia SKIL,<br />\r\n- narz\u0119dzia ogrodowe,<br />\r\n- narz\u0119dzia pomiarowe,<br />\r\n- narzedzia pneumatyczne,<br />\r\n- osprz\u0119t do elektronarz\u0119dzi,<br />\r\n- DREMEL.</p>\r\n\r\n<p>Oferujemy r&oacute;wnie\u017c sprzeda\u017c cz\u0119\u015bci zamiennych do narz\u0119dzi i maszyn zakupionych w Naszej firmie. Ch\u0119tnie pomo\u017cemy w doborze odpowiednich cz\u0119\u015bci!</p>",
     "type": 0
   }
@@ -49,18 +77,87 @@
   "model": "main.menuitem",
   "pk": 4,
   "fields": {
-    "title": "Galeria",
-    "content": "<p>Tre\u015b\u0107 galerii</p>",
-    "type": 1
+    "title": "CV",
+    "content": "",
+    "type": 0
   }
 },
 {
   "model": "main.menuitem",
   "pk": 3,
   "fields": {
-    "title": "Kontakt",
-    "content": "<p><strong>GLE\u0143 RY\u015a</strong></p>\r\n\r\n<p>ul. Daszy\u0144skiego 1&nbsp;<br />\r\n32-065 Krzeszowice</p>\r\n\r\n<p>tel. 012 282 59 88</p>\r\n\r\n<p>e-mail: englenrys@wp.pl</p>",
+    "title": "Contact",
+    "content": "<p><strong>Paulina Smoli\u0144ska</strong></p>\r\n\r\n<p>smolinska.ps@gmail.com</p>",
     "type": 0
+  }
+},
+{
+  "model": "main.project",
+  "pk": 5,
+  "fields": {
+    "start_date": "2016-05-01",
+    "end_date": "2016-05-21",
+    "name": "Ubezpieczenia Stanis\u0142aw Kosa\u0142ka",
+    "repository": null,
+    "link": "http://ubezpieczenia.trzebinia.com/",
+    "description": "<p>Static HTML.</p>",
+    "type": 0,
+    "images": [
+      26,
+      25
+    ],
+    "technologies": []
+  }
+},
+{
+  "model": "main.project",
+  "pk": 6,
+  "fields": {
+    "start_date": "2016-07-01",
+    "end_date": "2016-07-15",
+    "name": "Arte Tap",
+    "repository": null,
+    "link": "http://artetap.pl/",
+    "description": "<p>Almost static site, with gallery generated from ftp uploaded images.</p>\r\n\r\n<p><em>Technologies: Bootstrap, jQuery</em></p>",
+    "type": 0,
+    "images": [
+      27
+    ],
+    "technologies": []
+  }
+},
+{
+  "model": "main.project",
+  "pk": 7,
+  "fields": {
+    "start_date": "2016-12-01",
+    "end_date": "2017-04-15",
+    "name": "Zielone Rybitwy",
+    "repository": null,
+    "link": "http://alpakara.pl:1212/",
+    "description": "<p>Site for housing developer.</p>\r\n\r\n<p><i>Technologies: Bootstrap, JavaScript</i></p>",
+    "type": 0,
+    "images": [
+      28
+    ],
+    "technologies": []
+  }
+},
+{
+  "model": "main.project",
+  "pk": 8,
+  "fields": {
+    "start_date": "2017-03-01",
+    "end_date": "2017-05-01",
+    "name": "Gle\u0144 Ry\u015b",
+    "repository": null,
+    "link": "http://alpakara.pl:1214/",
+    "description": "<p>Site for a small power tools shop. In progress.</p>\r\n\r\n<p><i>Technoligies: Bootstrap, jQuery</i></p>",
+    "type": 0,
+    "images": [
+      29
+    ],
+    "technologies": []
   }
 },
 {
@@ -617,6 +714,101 @@
     "slug": "500x400_p3_g4",
     "caption": "",
     "date_added": "2017-03-01T20:36:31.741Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 25,
+  "fields": {
+    "image": "photologue/photos/kosalka.png",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "kosalka",
+    "slug": "kosalka",
+    "caption": "",
+    "date_added": "2017-04-24T20:23:45Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 26,
+  "fields": {
+    "image": "photologue/photos/kosalka_uYVQ5u6.png",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "kosalka1",
+    "slug": "kosalka1",
+    "caption": "",
+    "date_added": "2017-04-25T13:08:11Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 27,
+  "fields": {
+    "image": "photologue/photos/artetap.png",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "artetap",
+    "slug": "artetap",
+    "caption": "",
+    "date_added": "2017-04-25T13:10:53Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 28,
+  "fields": {
+    "image": "photologue/photos/zielonerybitwy.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "zielonerybitwy",
+    "slug": "zielonerybitwy",
+    "caption": "",
+    "date_added": "2017-04-25T14:17:09Z",
+    "is_public": true,
+    "sites": [
+      1
+    ]
+  }
+},
+{
+  "model": "photologue.photo",
+  "pk": 29,
+  "fields": {
+    "image": "photologue/photos/glenrys.jpg",
+    "date_taken": null,
+    "view_count": 0,
+    "crop_from": "center",
+    "effect": null,
+    "title": "Gle\u0144 Ry\u015b",
+    "slug": "glen-rys",
+    "caption": "",
+    "date_added": "2017-05-01T10:22:21Z",
     "is_public": true,
     "sites": [
       1
