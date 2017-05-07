@@ -73,3 +73,11 @@
     font-size: 1.2em;
   }
 }
+
+#cv-wrapper {
+  background-image: url("../img/bg-cv.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}

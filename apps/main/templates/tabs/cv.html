@@ -1,9 +1,11 @@
+{% load static %}
 <h2>{{ tab.title }}</h2>
 {% block content %}
     {% autoescape off %}{{ tab.content }}{% endautoescape %}
-   <ul class="list-inline">
-    <li class="contact-link">
-            <a href="static/cv_smolinska.pdf" class="btn"><i class="fa fa-file-text-o fa-fw"></i> <span class="network-name">CV</span></a>
+    <ul class="list-inline">
+        <li class="contact-link">
+            <a href="{% static 'cv_smolinska.pdf' %}" class="btn"><i class="fa fa-file-text-o fa-fw"></i> <span
+                    class="network-name">CV</span></a>
         </li>
     </ul>
 {% endblock %}

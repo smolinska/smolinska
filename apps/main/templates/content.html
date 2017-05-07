@@ -26,7 +26,7 @@
             </li>
         </ul>
         {% for tab in tabs %}
-            <div class="section-wrapper">
+            <div id="{{ tab.slug }}-wrapper" class="section-wrapper">
                 <section id="{{ tab.slug }}" class="content-section text-center">
                     <div class="section-bg"></div>
                     <div class="container">
@@ -38,9 +38,30 @@
             </div>
         {% endfor %}
     </div>
-    <button type="button" class="btn btn-primary button-ali" data-toggle="popover" data-placement="left"
+    <button type="button" class="btn btn-primary button-ali" data-toggle="modal" data-target="#largeShoes"
             data-content="Ski boots are for skiing... duh!">
         <img src="{% static 'img/ali.svg' %}">
     </button>
-    <div class="footer"></div>
+
+    {#MODAL#}
+    <div class="modal fade" id="largeShoes" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-header p-4">
+                <h2 class="modal-title py-2" id="modalLabelLarge">Looking for a Full Stack Python Developer?</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body p-4">
+                <a href="//alpakara.pl/"><img class="img-fluid" src="{% static 'img/alpakara.jpg' %}"></a>
+                <h3>If you need an experienced Python Django developer check out my boyfriends website!</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer"></div>
 </div>

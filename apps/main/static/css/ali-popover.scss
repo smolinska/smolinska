@@ -13,13 +13,40 @@
     outline: none;
     box-shadow: none;
   }
-  img{
+  img {
     transition: all .4s ease;
+    width: 56px;
+    filter: grayscale(100%) drop-shadow(0 0);
   }
   &:hover {
     background-color: transparent;
     img {
-      filter: drop-shadow(0 0 10px $textColor);
+      filter: grayscale(0) drop-shadow(0 0 10px $textColor);
     }
   }
+}
+
+.modal-header, .modal-body {
+  background-color: $darkColor;
+  color: $textColor;
+  text-align: center;
+  .modal-header {
+    border-bottom-color: $textColor;
+    background-color: $darkColor;
+  }
+  .modal-body {
+    background-color: $darkColor;
+  }
+  button {
+    color: $textColor;
+  }
+}
+
+.modal-open {
+  overflow: auto;
+  padding-right: 0 !important //bootstrap 4 bug
+}
+
+.modal {
+  background-color: transparentize($mainColor, 0.6);
 }
