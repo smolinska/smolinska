@@ -15,7 +15,7 @@ $(()->
   $nav.stickyTabs()
   $('[data-toggle="popover"]').popover()
 )
-$(window).load(()->
+$(window).on('load', ()->
   window.scrollHandler()
   ajaxTabs.loadAll($nav)
 )
