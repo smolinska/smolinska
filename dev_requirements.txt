@@ -1,2 +1,5 @@
 model_mommy
 django-with-asserts
+
+Fabric3
+fabric3-virtualenv

@@ -11,6 +11,7 @@ def prod():
     env.user = 'alex'
     env.port = 21022
     env.project = get_project_name()
+    env.branch = env.project
     env.env = PROD
     env.code_dir = '/var/www/' + env.project
     env.repo = local('git config --get remote.origin.url', capture=True)
