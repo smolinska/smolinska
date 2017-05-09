@@ -28,17 +28,19 @@
 
 .modal-header, .modal-body {
   background-color: $darkColor;
-  color: $textColor;
   text-align: center;
+  button {
+    color: $textColor;
+    &:hover {
+      color: $mainColor;
+    }
+  }
   .modal-header {
     border-bottom-color: $textColor;
     background-color: $darkColor;
   }
   .modal-body {
     background-color: $darkColor;
-  }
-  button {
-    color: $textColor;
   }
 }
 

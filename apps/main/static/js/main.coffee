@@ -14,9 +14,15 @@ $(()->
   $nav = $('.navbar')
   $nav.stickyTabs()
   $('[data-toggle="popover"]').popover()
+
 )
+
 $(window).on('load', ()->
   window.scrollHandler()
   ajaxTabs.loadAll($nav)
 )
 
+$(window).scroll(()->
+  if ($(this).scrollTop() == 0)
+    $('a.nav-link').removeClass('active')
+)

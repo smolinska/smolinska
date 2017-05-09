@@ -39,6 +39,7 @@ $animation_time: $images_count * $time_for_each_img;
   background-position: 50% 50%;
   background-repeat: none;
   z-index: 0;
+  //background-attachment: fixed;
 }
 
 .cb-slideshow li {

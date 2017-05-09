@@ -17,16 +17,17 @@ body {
   min-height: 100vh;
   position: relative;
   background-color: $mainColor;
-  color: $darkColor;
   font-size: 1.2em;
   font-family: 'Jura', sans-serif;
+  color: $textColor;
+  letter-spacing: 0.05em;
 }
 
 a {
-  color: $mainColor;
+  color: $textColor;
   &:hover, &:focus, &:active {
     text-decoration: none;
-    color: darken($mainColor, 20%);
+    color: $mainColor;
   }
 }
 

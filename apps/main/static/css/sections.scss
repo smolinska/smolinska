@@ -10,7 +10,6 @@
 }
 
 .section-wrapper {
-  color: #ffccef;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +27,6 @@
 .photo-row {
   height: 50vh;
   overflow: hidden;
-
   z-index: 160;
   position: relative;
   &:after {
@@ -54,7 +52,7 @@
   text-align: left;
   outline: solid;
   outline-width: 1px;
-  outline-color: rgba(249, 225, 232, 0.65);
+  outline-color: $textColor;
   outline-offset: 15px;
   h3 {
     font-weight: bold;
@@ -63,13 +61,19 @@
 
 .project-img {
   width: 100%;
+  filter: grayscale(40%);
+  &:hover {
+    filter: none;
+  }
 }
 
 //CONTACT
+#contact-wrapper {
+  background-color: $darkColor;
+}
 .contact-link{
   list-style-type: none;
   a {
-    color: $textColor;
     font-size: 1.2em;
   }
 }
