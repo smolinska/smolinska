@@ -9,7 +9,7 @@
                     </a>
                 </div>
                 <div class="col-md-8 col-sm-12">
-                    <h3>{{ project.name }}</h3>
+                    <a href="{{ project.link }}"><h3>{{ project.name }}</h3></a>
                     {% autoescape off %}{{ project.description }}{% endautoescape %}
                 </div>
                 <div class="foot clearfix">
