@@ -15,6 +15,7 @@ window.scrollHandler = function () {
         topOffset: 500,
         bottomOffset: 500,
 
+
         onTopIn: activateSection,
         onBottomIn: activateSection,
     });
@@ -66,4 +67,4 @@ window.scrollHandler = function () {
         });
 
     }
-}
+};

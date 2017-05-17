@@ -1,0 +1,51 @@
+@import "variables";
+
+#my-skills h4 {
+    padding-top: 20px;
+}
+
+.myProgress {
+    width: 100%;
+    background-color: transparentize($textColor, 0.6);
+}
+
+.myBar {
+    height: 15px;
+    background-color: $mainColor;
+}
+
+#bootstrap {
+    width: 60%;
+}
+
+#css {
+    width: 50%;
+}
+
+#js {
+    width: 25%;
+}
+
+#angular {
+    width: 10%;
+}
+
+#node {
+    width: 10%;
+}
+
+#sql {
+    width: 15%;
+}
+
+#linux {
+    width: 20%;
+}
+
+#design {
+    width: 40%;
+}
+
+#gimp {
+    width: 60%;
+}
