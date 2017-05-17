@@ -12,9 +12,6 @@ ajaxTabs = window.ajaxTabs(conf)
 $nav = undefined
 $(()->
   $nav = $('.navbar')
-  $nav.stickyTabs()
-  $('[data-toggle="popover"]').popover()
-
 )
 
 $(window).on('load', ()->

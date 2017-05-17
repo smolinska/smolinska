@@ -21,15 +21,10 @@ nav.navbar {
   }
 }
 
-.logo {
-font-family: 'Dancing Script', cursive;
-  text-shadow: 0 0 20px $mainColor;
-  font-weight: bolder;
-  font-size: 2em;
-  line-height: $navbarHeight;
-  &:hover, &:focus {
-    color: $textColor;
-  }
+.logo img {
+  max-height: $navbarHeight*2/3;
+  filter: drop-shadow(1px 1px 3px $mainColor);
+  padding-bottom: 8px;
 }
 
 .navbar-toggler {
