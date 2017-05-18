@@ -2,14 +2,14 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #070707;
+        fill: #7c033a;
         filter: url(#color-overlay-1);
         fill-rule: evenodd;
       }
     </style>
 
     <filter id="color-overlay-1" filterUnits="userSpaceOnUse">
-      <feFlood flood-color="#e9b9cc"/>
+      <feFlood flood-color="#7c033a"/>
       <feComposite operator="in" in2="SourceGraphic"/>
       <feBlend in2="SourceGraphic" result="solidFill"/>
     </filter>
