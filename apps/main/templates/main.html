@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     {# TODO: Set title and other#}
-    {% with name="Paulina Smolińska" url="http://domain.pl" desc="Description" kw="key1,key2" %}
+    {% with name="Paulina Smolińska" url="https://smolinska.eu" desc="I am rising web developer. I am Paulina Smolińska. " kw="web,design,developer,frontend,paulina,smolińska,kraków,work,javascript,angular,js,programista" %}
         <title>{{ name }}</title>
         <link rel="shortcut icon" href="{% static "img/favicon.ico" %}"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,8 +23,13 @@
 
         <meta property="og:image" content="{{ url }}/static/img/og.jpg"/>
         <meta property="og:image:type" content="image/jpeg"/>
-        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:width" content="1185"/>
         <meta property="og:image:height" content="742"/>
+
+        <meta property="og:image" content="{{ url }}/static/img/og2.jpg"/>
+        <meta property="og:image:type" content="image/jpeg"/>
+        <meta property="og:image:width" content="300"/>
+        <meta property="og:image:height" content="300"/>
 
         <link rel="canonical" href="{{ url }}"/>
     {% endwith %}
