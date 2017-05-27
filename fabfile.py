@@ -10,7 +10,7 @@ def prod():
     env.hosts = ['alpakara.pl']
     env.user = 'alex'
     env.port = 21022
-    env.project = get_project_name()
+    env.project = 'smolinska'
     env.branch = env.project
     env.env = PROD
     env.code_dir = '/var/www/' + env.project
