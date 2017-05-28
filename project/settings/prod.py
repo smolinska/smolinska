@@ -3,7 +3,7 @@ from project.settings.base import *
 DEBUG = False
 # TODO: DRY in fabric files
 ALLOWED_HOSTS = ['smolinska.eu', 'www.smolinska.eu']
-GOOGLE_ANALYTICS_ID = ''
+GOOGLE_ANALYTICS_ID = 'UA-99994333-1'
 INSTALLED_APPS.remove('django_gulp')
 
 
