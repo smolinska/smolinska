@@ -1,19 +1,21 @@
-django-ckeditor
+Django==1.11.1
+django-ckeditor==5.3.0
 django-compressor
-django-extensions
+django-extensions==1.7.9
 django-imagekit
-django-libsass
-django-ordered-model
-django-photologue
-django-gulp
+django-libsass==0.7
+django-ordered-model==1.4.1
+django-photologue==3.7
+django-gulp==2.5.1
 
-ipython
-pyreadline
+ipython==6.0.0
+pyreadline==2.1
 pytz
-slimit
+slimit==0.8.1
 
 Fabric3
 fabric3-virtualenv
 
+libsass==0.12.3
 gunicorn
 setproctitle

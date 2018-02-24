@@ -54,7 +54,7 @@ sudo yarn global add bower gulp-cli coffee-script
 yarn install
 bower install
 
-mkvirtualenv rybitwy --python=`which python3`
+mkvirtualenv smolinska --python=`which python3`
 pip install -r requirements.txt
 
 ./manage.py migrate

@@ -12,7 +12,7 @@ function swallowError(error) {
 gulp.task('default', ['sass'], function () {
   browserSync.init({
     notify: false,
-    proxy: "localhost:9000"
+    proxy: "localhost:8000"
   });
   gulp.watch("apps/main/static/css/*.scss", ['sass'])
 });
